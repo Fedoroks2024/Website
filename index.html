@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper Shorts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://api.memory.mts.ru/api/1.0/download/link/content/3EMTmfr3Hkefat98PZn5Hw">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css" media="all">
+        input {
+            max-width: 400px;
+            width: 100%;
+            appearance: none;
+            height: 18px;
+            border-radius: 25px;
+            background-color: #ededed;
+            box-shadow: 0 0 0 2px #ededed;
+            overflow: hidden;
+            cursor: pointer;
+             -webkit-tap-highlight-color: transparent;
+             outline: none;
+        }
+        input::-webkit-slider-thumb {
+            appearance: none;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            background-color: #4070f4;
+            box-shadow: -208px 0 0 200px #4070f4;
+            -webkit-tap-highlight-color: transparent;
+             outline: none;
+        }
+    </style>
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: sans-serif;
+            background-color: #222;
+            color: #fff;
+            -webkit-tap-highlight-color: transparent;
+             outline: none;
+        }
+
+        swiper-container {
+            width: 100%;
+            height: 100%;
+             -webkit-tap-highlight-color: transparent;
+              outline: none;
+        }
+
+        swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: #333;
+            font-size: 18px;
+            -webkit-tap-highlight-color: transparent;
+             outline: none;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+             -webkit-tap-highlight-color: transparent;
+             outline: none;
+        }
+
+        .video-player {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+             -webkit-tap-highlight-color: transparent;
+              outline: none;
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            z-index: 10;
+            display: none;
+            border-radius: 8px;
+            padding: 8px;
+            transition: opacity 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
+             outline: none;
+        }
+        .video-container:hover .video-controls {
+            display: block;
+            opacity: 1;
+        }
+
+        .video-icons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            height: 50px;
+            width: 50px;
+            -webkit-tap-highlight-color: transparent;
+             outline: none;
+        }
+        .video-container:hover .video-icons{
+          opacity: 1;
+        }
+
+        .video-container.playing .icon-play {
+            display: none;
+        }
+        .video-container .icon-pause {
+            display: none;
+        }
+        .video-container.playing .icon-pause {
+            display: block;
+        }
+         .video-icons div {
+            color: white;
+            font-size: 2em;
+            border-radius: 50%;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent; /* Remove highlight on tap (mobile Safari) */
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <swiper-container class="mySwiper" direction="vertical">
+        <swiper-slide>
+            <div class="video-container">
+                <video loop class="video-player"
+                    src="https://api.memory.mts.ru/api/1.0/download/link/content/n7n_SwpdUEmegA8h0hasjw"></video>
+                <div class="video-controls">
+                    <input type="range" class="progress-range" value="0" step="0.01" min="0" max="1">
+                </div>
+                 <div class="video-icons">
+                      <div class="icon-play"><i class="fas fa-play"></i></div>
+                       <div class="icon-pause"><i class="fas fa-pause"></i></div>
+                  </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+             <div class="video-container">
+                  <video autoplay loop muted class="video-player"
+                            src="https://api.memory.mts.ru/api/1.0/download/link/content/n7n_SwpdUEmegA8h0hasjw"></video>
+                      <div class="video-controls">
+                        <input type="range" class="progress-range" value="0" step="0.01" min="0" max="1">
+                    </div>
+                    <div class="video-icons">
+                      <div class="icon-play"><i class="fas fa-play"></i></div>
+                       <div class="icon-pause"><i class="fas fa-pause"></i></div>
+                  </div>
+                </div>
+        </swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+        <swiper-slide>Slide 4</swiper-slide>
+        <swiper-slide>Slide 5</swiper-slide>
+        <swiper-slide>Slide 6</swiper-slide>
+        <swiper-slide>Slide 7</swiper-slide>
+        <swiper-slide>Slide 8</swiper-slide>
+        <swiper-slide>Slide 9</swiper-slide>
+    </swiper-container>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://api.memory.mts.ru/api/1.0/download/link/content/y_SG8LWKTEKDVzpLMu_MrA"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const videoContainers = document.querySelectorAll('.video-container');
+
+          videoContainers.forEach(container => {
+            const videoElement = container.querySelector('.video-player');
+            const videoControls = container.querySelector('.video-controls');
+            const progressRange = container.querySelector('.progress-range');
+            const videoIcons = container.querySelector('.video-icons');
+            const iconPlay = container.querySelector('.icon-play');
+             const iconPause = container.querySelector('.icon-pause');
+
+            let isPlaying = false;
+            let wasPausedByUser = false;
+            let controlsTimeoutId;
+            let iconTimeoutId;
+
+
+           const togglePlay = () => {
+                if (isPlaying) {
+                    videoElement.pause();
+                } else {
+                    videoElement.play();
+                }
+                container.classList.toggle('playing', !isPlaying);
+                isPlaying = !isPlaying;
+                showControls();
+                showIcons();
+            };
+
+
+            const updateProgressBar = () => {
+              if (videoElement.duration) {
+                const progressPercent = (videoElement.currentTime / videoElement.duration) * 100;
+                progressRange.style.setProperty('--progress-percent', `${progressPercent}%`);
+                progressRange.value = videoElement.currentTime / videoElement.duration;
+              }
+            };
+
+             const showIcons = () => {
+                  videoIcons.style.opacity = 1;
+                  clearTimeout(iconTimeoutId);
+                iconTimeoutId =  setTimeout(() => {
+                    videoIcons.style.opacity = 0;
+                  }, 1000);
+            };
+
+            const showControls = () => {
+                videoControls.style.display = 'block';
+                if(!isPlaying) {
+                    progressRange.style.display = 'block';
+                }
+
+                clearTimeout(controlsTimeoutId);
+                if (isPlaying) {
+                   controlsTimeoutId = setTimeout(() => {
+                      videoControls.style.display = 'none';
+                      progressRange.style.display = 'none';
+                   }, 1000);
+                }
+            };
+
+
+            videoElement.addEventListener('click', togglePlay);
+             videoElement.addEventListener('mouseenter', showControls);
+              videoElement.addEventListener('mousemove', showControls);
+              videoElement.addEventListener('mouseenter', showIcons);
+
+
+
+
+            videoElement.addEventListener('ended', () => {
+              container.classList.remove('playing');
+              isPlaying = false;
+              if (!wasPausedByUser) {
+                videoElement.currentTime = 0;
+                videoElement.play();
+                container.classList.add('playing');
+                isPlaying = true;
+              }
+               showControls();
+               showIcons()
+
+            });
+
+
+
+            videoElement.addEventListener('timeupdate', updateProgressBar);
+               progressRange.addEventListener('mousedown', () => {
+                  clearTimeout(controlsTimeoutId);
+              });
+
+                progressRange.addEventListener('mouseup', () => {
+                   showControls();
+                });
+
+
+            progressRange.addEventListener('input', () => {
+                const newTime = progressRange.value * videoElement.duration;
+                videoElement.currentTime = newTime;
+                 updateProgressBar();
+            });
+
+            videoElement.addEventListener('play', () => {
+              container.classList.add('playing');
+              isPlaying = true;
+                showControls();
+                showIcons();
+            });
+
+            videoElement.addEventListener('pause', () => {
+              container.classList.remove('playing');
+              isPlaying = false;
+                showControls();
+            });
+            iconPlay.addEventListener('click', togglePlay);
+             iconPause.addEventListener('click', togglePlay);
+
+
+          });
+        });
+    </script>
+</body>
+</html>
